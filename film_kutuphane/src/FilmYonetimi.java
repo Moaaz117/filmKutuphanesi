@@ -28,11 +28,11 @@ public class FilmYonetimi {
             System.out.println("Film adı:");
             String filmAdi=scanner.nextLine();
             for (int i = 0; i < ad.size(); i++) {
-                if (ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     adVarMi = true;
                 }
             }if (adVarMi){
-                System.out.println("Aynı isme sahip film var");
+                System.out.println("Aynı isme sahip bir film var");
                 adVarMi = false;
             }
             else{
@@ -68,7 +68,7 @@ public class FilmYonetimi {
             String filmAdi = scanner.nextLine();
             boolean durum=false;
             for (int i = 0; i < ad.size(); i++) {
-                if (ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     durum=true;
                 }
             }
@@ -150,6 +150,7 @@ public class FilmYonetimi {
                 case 4:
                     FilmTarihDuzenleme();
                     durum = false;
+                    break;
                 default:
                     System.out.println("Geçersiz giriş.");
             }
@@ -164,7 +165,7 @@ public class FilmYonetimi {
             String filmAdi = scanner.nextLine();
             boolean index=false;
             for (int i = 0; i < ad.size(); i++) {
-                if (ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     index = true;
                 }
             }if (!index)
@@ -188,7 +189,7 @@ public class FilmYonetimi {
             String filmYonetmeni = scanner.nextLine();
             boolean index=false;
             for (int i = 0; i <= this.ad.size()-1; i++) {
-                if (yonetmen.get(i).equals(filmYonetmeni)) {
+                if (yonetmen.get(i).equals(filmYonetmeni)||yonetmen.get(i).toLowerCase().equals(filmYonetmeni.toLowerCase())) {
                     index = true;
                 }
             }if (!index)
@@ -211,7 +212,7 @@ public class FilmYonetimi {
             String filmTuru = scanner.nextLine();
             boolean index=false;
             for (int i = 0; i <= this.tur.size()-1; i++) {
-                if (tur.get(i).equals(filmTuru)) {
+                if (tur.get(i).equals(filmTuru)||tur.get(i).toLowerCase().equals(filmTuru.toLowerCase())) {
                     index = true;
                 }
             }if (!index)
@@ -270,10 +271,10 @@ public class FilmYonetimi {
         }
         else{
             System.out.println("Filmin eski adını giriniz:");
-            String eskiAd = scanner.nextLine();
+            String filmAdi = scanner.nextLine();
             int index=-1;
-            for (int i = 0; i <= this.ad.size()-1; i++) {
-                if (this.ad.get(i).equals(eskiAd)){
+            for (int i = 0; i < this.ad.size(); i++) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     index = i;
                 }
             }if (index<0)
@@ -295,7 +296,7 @@ public class FilmYonetimi {
             String filmAdi = scanner.nextLine();
             int index=-1;
             for (int i = 0; i <= this.ad.size()-1; i++) {
-                if (this.ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     index = i;
                 }
             }if (index<0)
@@ -317,7 +318,7 @@ public class FilmYonetimi {
             String filmAdi = scanner.nextLine();
             int index=-1;
             for (int i = 0; i <= this.ad.size()-1; i++) {
-                if (this.ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     index = i;
                 }
             }if (index<0)
@@ -339,7 +340,7 @@ public class FilmYonetimi {
             String filmAdi = scanner.nextLine();
             int index=-1;
             for (int i = 0; i <= this.tarih.size()-1; i++) {
-                if (this.ad.get(i).equals(filmAdi)) {
+                if (ad.get(i).equals(filmAdi)||ad.get(i).toLowerCase().equals(filmAdi.toLowerCase())) {
                     index = i;
                 }
             }if (index<0)
