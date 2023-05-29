@@ -105,7 +105,17 @@ public class FilmYonetimi {
         boolean durum = true;
         while (durum){
             System.out.println("Arama türü seçin:\n1:İsime göre arama  2:Yönetmene göre arama  3:Film türüne göre arama  4:Tarihe göre arama");
-            int secim = scanner.nextInt();
+            boolean durum1 = true;
+            int secim = 0;
+            while (durum1) {
+                String giris =scanner.nextLine();
+                try {
+                    secim=(Integer.parseInt(giris));
+                    durum1 = false;
+                } catch (NumberFormatException e) {
+                    System.out.println("Sayı giriniz!");
+                }
+            }
             switch (secim) {
                 case 1:
                     FilmAdArama();
@@ -133,7 +143,17 @@ public class FilmYonetimi {
         boolean durum = true;
         while (durum){
             System.out.println("1:İsimi düzenle  2:Yönetmeni düzenle  3:Türü düzenle  4:Tarihi düzenle");
-            int secim = scanner.nextInt();
+            boolean durum1 = true;
+            int secim = 0;
+            while (durum1) {
+                String giris =scanner.nextLine();
+                try {
+                    secim=(Integer.parseInt(giris));
+                    durum1 = false;
+                } catch (NumberFormatException e) {
+                    System.out.println("Sayı giriniz!");
+                }
+            }
             switch (secim) {
                 case 1:
                     FilmAdDuzenleme();
